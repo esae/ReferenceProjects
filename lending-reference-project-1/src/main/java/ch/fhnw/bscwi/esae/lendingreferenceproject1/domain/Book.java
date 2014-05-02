@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.fhnw.mscbis.premscis.lendingreferenceproject1.domain;
+package ch.fhnw.bscwi.esae.lendingreferenceproject1.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -2,16 +2,16 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.fhnw.mscbis.premscis.lendingreferenceproject1.controller;
+package ch.fhnw.bscwi.esae.lendingreferenceproject1.controller;
 
+import ch.fhnw.bscwi.esae.lendingreferenceproject1.business.BookEJB;
+import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.Book;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.html.HtmlDataTable;
 
-import ch.fhnw.mscbis.premscis.lendingreferenceproject1.domain.Book;
-import ch.fhnw.mscbis.premscis.lendingreferenceproject1.ejb.BookEJB;
 
 /**
  *

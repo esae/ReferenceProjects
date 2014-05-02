@@ -2,8 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.fhnw.mscbis.premscis.lendingreferenceproject1.ejb;
+package ch.fhnw.bscwi.esae.lendingreferenceproject1.business;
 
+import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.Book;
+import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.BookLending;
+import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.Customer;
 import java.util.GregorianCalendar;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -11,9 +14,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import ch.fhnw.mscbis.premscis.lendingreferenceproject1.domain.Book;
-import ch.fhnw.mscbis.premscis.lendingreferenceproject1.domain.BookLending;
-import ch.fhnw.mscbis.premscis.lendingreferenceproject1.domain.Customer;
 
 /**
  *
@@ -22,7 +22,7 @@ import ch.fhnw.mscbis.premscis.lendingreferenceproject1.domain.Customer;
 @Stateless
 public class BookLendingEJB {
     
-    @PersistenceContext(unitName = "primary")
+    @PersistenceContext(unitName = "ch.fhnw.bscwi.esae_lending-reference-project-1_war_1.0-SNAPSHOTPU")
     private EntityManager em;
 
 
