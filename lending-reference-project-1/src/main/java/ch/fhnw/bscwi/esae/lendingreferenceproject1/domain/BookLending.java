@@ -27,10 +27,10 @@ public class BookLending implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "book_fk")
     private Book book;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "customer_fk")
     private Customer customer;
     @Temporal(TemporalType.DATE)
