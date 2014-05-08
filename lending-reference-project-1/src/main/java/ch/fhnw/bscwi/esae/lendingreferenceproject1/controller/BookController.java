@@ -6,20 +6,21 @@ package ch.fhnw.bscwi.esae.lendingreferenceproject1.controller;
 
 import ch.fhnw.bscwi.esae.lendingreferenceproject1.business.BookEJB;
 import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.Book;
+import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.component.html.HtmlDataTable;
+import javax.inject.Named;
 
 
 /**
  *
  * @author andreas.martin
  */
-@ManagedBean
-@SessionScoped //we need a session!
-public class BookController {
+@Named
+@SessionScoped
+public class BookController implements Serializable{
 
     public BookController() {
     }

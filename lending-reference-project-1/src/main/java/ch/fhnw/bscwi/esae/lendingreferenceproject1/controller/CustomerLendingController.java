@@ -8,21 +8,22 @@ import ch.fhnw.bscwi.esae.lendingreferenceproject1.business.BookLendingEJB;
 import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.Book;
 import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.BookLending;
 import ch.fhnw.bscwi.esae.lendingreferenceproject1.domain.Customer;
+import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.faces.bean.ManagedBean;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.SessionScoped;
 import javax.faces.component.html.HtmlDataTable;
+import javax.inject.Named;
 
 
 /**
  *
  * @author andreas.martin
  */
-@ManagedBean
+@Named
 @SessionScoped
-public class CustomerLendingController{
+public class CustomerLendingController implements Serializable{
 
     @EJB
     private BookLendingEJB bookLendingEJB;
