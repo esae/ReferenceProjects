@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/LoanApproval/CustomerWebService?WSDL" uri="wsdl/localhost_8080/LoanApproval/CustomerWebService.wsdl"/>
+    <system systemId="http://localhost:8080/LoanApproval/CustomerWebService?xsd=1" uri="wsdl/localhost_8080/LoanApproval/CustomerWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/LoanApproval/ProcessRequestWebService?WSDL" uri="wsdl/localhost_8080/LoanApproval/ProcessRequestWebService.wsdl"/>
+    <system systemId="http://localhost:8080/LoanApproval/ProcessRequestWebService?xsd=1" uri="wsdl/localhost_8080/LoanApproval/ProcessRequestWebService.xsd_1.xsd"/>
+</catalog>

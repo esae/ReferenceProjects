@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://service.loanapproval.esae.bscwi.fhnw.ch/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.loanapproval.esae.bscwi.fhnw.ch/">
+
+<xs:element name="loadCustomer" type="tns:loadCustomer"/>
+
+<xs:element name="loadCustomerResponse" type="tns:loadCustomerResponse"/>
+
+<xs:complexType name="loadCustomer">
+<xs:sequence>
+<xs:element name="customerId" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loadCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customerDTO" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customerDTO">
+<xs:sequence>
+<xs:element name="account" type="tns:accountDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="address" type="tns:addressDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="dateOfBirth" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="firstName" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="lastName" type="xs:string" minOccurs="0"/>
+<xs:element name="loan" type="tns:loanDTO" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="accountDTO">
+<xs:sequence>
+<xs:element name="balance" type="xs:long"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addressDTO">
+<xs:sequence>
+<xs:element name="addressType" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="country" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long" minOccurs="0"/>
+<xs:element name="street1" type="xs:string" minOccurs="0"/>
+<xs:element name="zipcode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loanDTO">
+<xs:sequence>
+<xs:element name="amount" type="xs:long"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="loanType" type="xs:string" minOccurs="0"/>
+<xs:element name="term" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

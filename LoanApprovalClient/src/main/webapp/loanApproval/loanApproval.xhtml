@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Loan Approval - Process Request</title>
+    </h:head>
+    <h:body>
+        <h:form >  
+
+            <p:panel id="display" header="Customer Information" style="margin-top:10px;">
+                <h:panelGrid columns="2">
+                    <h:outputText value="Firstname: " />
+                    <h:outputText value="#{loanApprovalController.customer.firstName}" />
+                    <h:outputText value="Lastname: " />
+                    <h:outputText value="#{loanApprovalController.customer.lastName}" />
+
+                    <p:dataTable var="account" value="#{loanApprovalController.customer.account}">
+                        <p:column headerText="Account Type">
+                            <h:outputText value="#{account.name}" />
+                        </p:column>
+                        <p:column headerText="Balance">
+                            <h:outputText value="#{account.balance}" />
+                        </p:column>
+                    </p:dataTable>
+                </h:panelGrid>
+            </p:panel>
+            <p:panelGrid columns="2" >  
+                <f:facet name="header">
+                    Loan Approval - Process Request
+                </f:facet>
+                <p:outputLabel for="loanAmount" value="Loan Amount:" style="font-weight:bold"/>  
+                <p:inputText id="loanAmount" value="#{loanApprovalController.amount}" label="loanAmount"/>  
+                <f:facet name="footer">
+                    <p:commandButton value="Accept" action="#{loanApprovalController.doProcessRequest}"/>  
+                </f:facet>
+            </p:panelGrid> 
+
+        </h:form> 
+    </h:body>
+</html>
+

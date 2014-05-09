@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Loan Approval - Customer Search</title>
+    </h:head>
+    <h:body>
+        <h:form >  
+
+            <p:panelGrid columns="2" >  
+                <f:facet name="header">
+                    Loan Approval - Customer Search
+                </f:facet>
+                <p:outputLabel for="customerId" value="Customer ID:" style="font-weight:bold"/>  
+                <p:inputText id="customerId" value="#{loanApprovalController.customer.id}" label="CustomerId"/>  
+                <f:facet name="footer">
+                    <p:commandButton value="Search Customer" action="#{loanApprovalController.doLoadCustomer}"/>  
+                </f:facet>
+            </p:panelGrid>  
+
+        </h:form> 
+    </h:body>
+</html>
+
